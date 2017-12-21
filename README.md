@@ -1,5 +1,19 @@
 # Node Starter
 
+## Introduction
+This is a starter template for creating a node server with express, graphql, zipkin, docker, and an AWS KMS integration.
+While it does come bundled with all these features, it also serves as a good example on how you can organize and develop any node server.
+
+### Whats inside
+- Basic HTTP and HTTPS express server
+- GraphQL schema definition and example implementation
+- Logging configuration and example implementation
+- Zipkin integration for trace information
+- `Dockerfile` for building docker image
+- `docer-compose` file for building and running a docker stack
+- AWS KMS integration for decryption
+- Unit test examples for routes, graphql queries, and REST calls.
+
 ## Getting started
 
 #### Installing
@@ -101,9 +115,9 @@ To build and start up multiple docker containers. Currently, this compose file w
 This compose file uses two images, `joepuzzo/node-starter` and `openzipkin/zipkin`. In order to run the compose file, you must first make sure you have the images locally on your machine.
 If you simply follow the instructions below, docker will attempt to start up the services. When docker does this, it will first look to see if you have the images installed on your machine.
 If docker finds the images, it will create and start the docker containers. If docker does not find them locally, it will attempt to install them from dockers hub. So, this means that the first
-time you run this command it will be slow, as its downloading stuff. 
+time you run this command it will be slow, as its downloading stuff.
 
-##### Start 
+##### Start
 
 Run the following command to start the website-api image and a zipkin server image.
 
