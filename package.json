@@ -1,0 +1,48 @@
+{
+  "name": "node-starter",
+  "version": "1.0.0",
+  "description": "A starter template for a node app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev nodemon index.js",
+    "build": "docker build -t joepuzzo/node-starter .",
+    "start": "docker run -p 4040:8080 -p 4443:8443 -e \"NODE_ENV=dev\" -t -i joepuzzo/node-starter",
+    "start:compose": "docker-compose up -d",
+    "start:docker": "node index.js",
+    "test": "NODE_ENV=spec mocha",
+    "test:watch": "npm run test -- --watch"
+  },
+  "keywords": [],
+  "author": "joepuzzo",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^1.1.2",
+    "aws-sdk": "^2.121.0",
+    "body-parser": "^1.18.2",
+    "cls-middleware": "^1.1.0",
+    "continuation-local-storage": "^3.2.0",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "graphql": "^0.11.4",
+    "graphql-tools": "^2.1.0",
+    "superagent": "^3.6.3",
+    "winston": "^2.4.0",
+    "zipkin": "^0.7.3",
+    "zipkin-context-cls": "^0.6.1",
+    "zipkin-instrumentation-express": "^0.7.3",
+    "zipkin-transport-http": "^0.7.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.4.0",
+    "mocha": "^4.0.1",
+    "nock": "^9.0.22",
+    "nodemon": "^1.12.1",
+    "sinon": "^4.0.1",
+    "supertest": "^3.0.0"
+  }
+}
