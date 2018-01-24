@@ -4,13 +4,12 @@
   "description": "A starter template for a node app",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=dev nodemon index.js",
-    "build": "docker build -t joepuzzo/node-starter .",
-    "start": "docker run -p 4040:8080 -p 4443:8443 -e \"NODE_ENV=dev\" -t -i joepuzzo/node-starter",
-    "start:compose": "docker-compose up -d",
-    "start:docker": "node index.js",
+    "start": "node index.js",
     "test": "NODE_ENV=spec mocha",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "build:docker": "docker build -t joepuzzo/node-starter .",
+    "start:docker": "docker run -p 4040:8080 -p 4443:8443 -e \"NODE_ENV=dev\" -t -i joepuzzo/node-starter",
+    "start:compose": "docker-compose up -d"
   },
   "keywords": [],
   "author": "joepuzzo",

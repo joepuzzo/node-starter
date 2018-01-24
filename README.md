@@ -26,14 +26,14 @@ Ok you're done installing things :)
 #### Build
 Run the following command to build the project.
 
-`npm run build`
+`npm run build:docker`
 
 Note: this will build a docker image called `joepuzzo/node-starter`.
 
 #### Run
 Run the following command to start up the server on `http://localhost:4040` and `https://localhost:4443`
 
-`npm start`
+`npm start:docker`
 
 Note: this will create and run a docker container from the image that was created after running `npm run build`.
 
@@ -43,6 +43,13 @@ Run the following command to run the tests.
 `npm test`
 
 This should run all our tests and should display the results in the terminal.
+
+#### Dev
+Run the following command to run the service locally ( NOT on a docker image )
+
+`npm start`
+
+This will simply start up the node application.
 
 ---
 
